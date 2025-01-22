@@ -1,6 +1,7 @@
-import psycopg2
+import time
 
 def query_database():
+    time.sleep(5)  # Задержка на 5 секунд для ожидания готовности БД
     try:
         # Подключение к PostgreSQL
         conn = psycopg2.connect(

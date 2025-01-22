@@ -1,8 +1,8 @@
-CREATE TABLE test_table (
-    name VARCHAR(10) NOT NULL CHECK (LENGTH(name) BETWEEN 4 AND 10),
-    surname TEXT NOT NULL,
-    city TEXT NOT NULL,
-    age INT NOT NULL CHECK (age > 0 AND age <= 150)
+CREATE TABLE IF NOT EXISTS test_table (
+    name VARCHAR(10),
+    surname VARCHAR(50),
+    city VARCHAR(50),
+    age INT CHECK (age > 0 AND age <= 150)
 );
 
 INSERT INTO test_table (name, surname, city, age) VALUES
